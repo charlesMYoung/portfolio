@@ -11,11 +11,11 @@ export interface NavLink {
 const defaultNavList = [
   {
     name: "GH",
-    path: "github.com",
+    path: "https://github.com",
   },
   {
     name: "BG",
-    path: "github.com",
+    path: "https://blog.cyatime.com/",
   },
 ];
 

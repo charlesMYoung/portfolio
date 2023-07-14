@@ -10,8 +10,12 @@ function Contact() {
           您可以通过以下方式联系我:{" "}
         </h2>
         <p className="font-SmileySans mt-12 flex space-x-8">
-          <FaGithub className="text-6xl cursor-pointer"></FaGithub>
-          <FaMailBulk className="text-6xl cursor-pointer"></FaMailBulk>
+          <a href="https://github.com/Arferik">
+            <FaGithub className="text-6xl cursor-pointer"></FaGithub>
+          </a>
+          <a href="mailto:charlesmaxwellyoung@gmail.com">
+            <FaMailBulk className="text-6xl cursor-pointer"></FaMailBulk>
+          </a>
         </p>
       </div>
     </div>
