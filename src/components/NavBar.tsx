@@ -1,7 +1,14 @@
+"use client";
 import { singleCls } from "@/utils/tailcls";
-import React from "react";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
 
-const navList = [
+export interface NavLink {
+  name: string;
+  path: string;
+  type?: string;
+}
+const defaultNavList = [
   {
     name: "GH",
     path: "github.com",
@@ -13,6 +20,21 @@ const navList = [
 ];
 
 function NavBar() {
+  const pathname = usePathname();
+  const [navList, setNavList] = useState<NavLink[]>(defaultNavList);
+  useEffect(() => {
+    const [, pathnameNotSlut] = pathname.split("/");
+    if (["about", "contact"].includes(pathnameNotSlut)) {
+      setNavList([
+        {
+          name: "HOME",
+          path: "/",
+        },
+      ]);
+    } else {
+      setNavList(defaultNavList);
+    }
+  }, [pathname]);
   return (
     <nav
       className={singleCls(

@@ -50,6 +50,9 @@ const unit = (/** @type {number} */ size) => {
 
 const typography = plugin(({ addComponents, theme }) => {
   addComponents({
+    "text-stroke-3": {
+      webkitTextStroke: "3px var(--md-sys-color-primary)",
+    },
     ".font-Lobster": {
       fontFamily: "Lobster,sans-serif",
     },
