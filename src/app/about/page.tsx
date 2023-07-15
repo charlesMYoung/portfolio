@@ -32,7 +32,6 @@ function About() {
             </div>
           </div>
         </section>
-        <div className="text-right flex justify-end"></div>
       </div>
     </div>
   );

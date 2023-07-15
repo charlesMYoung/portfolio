@@ -46,9 +46,7 @@ export default function Home() {
           );
         })}
       </div>
-      <div className="absolute right-2 bottom-2">
-        备案号：苏ICP备 19072422号-3
-      </div>
+      <div className="absolute right-2 bottom-2">{process.env.CASE_NUMBER}</div>
     </div>
   );
 }
